@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<div id ="time">2023-2-4</div>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+	<ol id="ol">
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+		<li>d</li>
+	</ol>
+	<div class="box">盒子1</div>
+	<div class="box">盒子2</div>
+	<script>
+		//get body
+		let body = document.body
+		console.log(body)
+		console.dir(body)
+		console.log('---------------------')
+		// get html
+		let html = document.documentElement
+		console.log(html)
+		console.dir(html)
+		console.log('----------------------')
+		//id
+		let time = document.getElementById('time')
+		console.log(time.innerText)
+		console.log(typeof time)//object
+		console.dir(time)
+		console.log('-------------------')
+		//標籤名
+		let lis = document.getElementsByTagName('li')
+		console.log(lis)
+		console.log(lis.length)
+		console.log(typeof lis)
+		console.log(lis[0].innerText)
+		console.log(lis[1].innerText)
+		console.log('-----------------')
+		
+		let ol = document.getElementsByTagName('ol')
+		console.log(ol)
+		console.log(ol[0].getElementsByTagName('li'))
+		console.log(ol[0].getElementsByTagName('li')[0].innerText)
+		console.log('-------------------')
+		
+		let ol2 = document.getElementById('ol').getElementsByTagName('li')
+		console.log(ol2[0].innerText)
+		console.log('-----------------')
+		
+		//類名 html5 新增
+		let boxes = document.getElementsByClassName('box')
+		console.log(boxes)
+		console.log(boxes[0].innerText)
+		console.log(boxes[1].innerText)
+		console.log('---------------------')
+		//querySelector
+		let box1 = document.querySelector('.box')//獲取第一個
+		console.log(box1.innerText)
+		let boxAll = document.querySelectorAll('.box')
+		console.log(boxAll[1].innerText)
+	</script>
+</body>
+</html>
