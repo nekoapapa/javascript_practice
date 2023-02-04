@@ -78,6 +78,16 @@
 		}
 		//onblur
 		let onblur = document.getElementById('onblur')
+		onblur.onfocus = function () {
+			if (this.value === '手機') {
+				this.value = ''
+			}
+		}
+		onblur.onblur = function () {
+			if (this.value == '') {
+				this.value = '手機'
+			}
+		}
 		
 		
 	</script>
