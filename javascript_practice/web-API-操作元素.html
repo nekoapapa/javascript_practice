@@ -8,6 +8,11 @@
 			width: 300px;
 			height: 200px;
 		}
+		.style {
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+		}
 	</style>
 </head>
 <body>
@@ -19,6 +24,7 @@
 	<button id="ldh">劉的華</button>
 	<button id="zxy">張學友</button>
 	<img src="images/ldh.jpg" alt="" title="劉的華">
+	<div class="style" id="style"></div>
 	<script>
 		//innerText
 		let btn = document.querySelector('button')
@@ -57,7 +63,18 @@
 			img.src = 'images/ldh.jpg'
 			img.title = '劉的華'
 		}
-		
+		//style
+		let style = document.getElementById('style')
+		let styleFlag = 0
+		style.onclick = function () {
+			if (styleFlag == 0) {
+				this.style.backgroundColor = 'purple'
+				styleFlag = 1
+				return
+			}
+			this.style.backgroundColor = 'pink'
+			styleFlag = 0
+		}
 	</script>
 
 </body>
