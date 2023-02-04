@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+	<script>
+		//簡單數據類型
+		let str = '123'
+		let num = 123
+		let bool = true
+		let undefine = undefined
+		let nulls = null
+		console.log(typeof str)//string
+		console.log(typeof num)//number
+		console.log(typeof bool)//boolean
+		console.log(typeof undefine)//undefined
+		console.log(typeof nulls)//object
+		console.log('-----------------------')
+		//複雜數據類型
+		function f1(name) {
+			this.name = name
+		}
+		function f2(x) {
+			console.log('2'+ x.name)//a
+			x.name = 'b'
+			console.log('3' + x.name)//b
+		}
+		let p = new f1('a')
+		console.log('1' + p.name)//a
+		f2(p)
+		console.log('4' + p.name)//b
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+	<script>
+		//創建對象
+		//字面量
+		let user = {
+			name: 'ian',
+			age: 18,
+			sex: 'boy',
+			sayHi: function () {
+				console.log('hi')
+				return 'hi'
+			}
+		}
+		console.log(user)
+		console.log(user.name)
+		console.log(user.age)
+		console.log(user.sex)
+		console.log(user.sayHi())
+		
+		console.log('-----------------')
+		
+		//new object
+		let user2 = new Object();
+		user2.name = 'ian'
+		user2.age = 18
+		user2.sex = 'boy'
+		user2.sayHi = function () {
+			console.log('hi')
+			return 'hi'
+		}
+		console.log(user2)
+		console.log(user2.name)
+		console.log(user2.age)
+		console.log(user2.sex)
+		console.log(user2.sayHi())
+		
+		console.log('----------------')
+		//構造函數
+		function u(name,age,sex) {
+			this.name = name
+			this.age = age
+			this.sayHi = function () {
+				console.log('hi')
+				return 'hi'
+			}
+			this.sex = sex
+		}
+		let user3 = new u('a',12,'girl')
+		let user4 = new u('w',12,'girl')
+		console.log(user3.name)
+		console.log(user4.name)
+		
+		console.log('------------------')
+		
+		//遍歷對象
+		let user5 = new u('x',12,'girl')
+		for (let k in user5) {
+			console.log(k)
+			console.log(user5[k])
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+	<script>
+		let arr = [1, 2, '1', true]
+		for (let i = 0; i < arr.length; i++) {
+			console.log(arr[i])
+		}
+		console.log('------')
+		let arr2 = ['a', 'd', 'c']
+		let str = ''
+		for (let i = 0; i<arr2.length; i++) {
+			if (i == 0) {
+				str += arr2[i]
+				continue
+			}
+			str += '|' + arr2[i]
+		}
+		console.log(str)
+		console.log('-----------------')
+		let arr3 = ['a', 'b', 'c']
+		console.log(arr3)
+		arr3.length = 4
+		console.log(arr3)
+		console.log(arr3[3])
+		arr3[0] = 'aa'
+		arr3[3] = 'd'
+		arr3[4] = 'e'
+		arr3[6] = 'f'
+		console.log(arr3)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

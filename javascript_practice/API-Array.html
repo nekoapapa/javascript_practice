@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+	<script>
+		//創建array
+		let arr1 = ['a', 'b','c','c']
+		let arr2 = new Array();
+		//reverse arr
+		function reverses(arr) {
+			if (!(Array.isArray(arr))) {
+				return 'error input not array'
+			}
+			let newArr = []
+			for (let i = arr.length-1; i >=0 ; i--) {
+				newArr[newArr.length] = arr[i];
+			}
+			return newArr
+		}
+		console.log(reverses(arr1))
+		console.log(reverses(1))
+		
+		console.log('-----------------')
+		//增
+		arr2.push('a','b')
+		console.log(arr2)
+		console.log(arr2.push('c')+'  |  '+ arr2)
+		console.log(arr2.unshift('1','2')+'  |  '+ arr2)
+		console.log('----------')
+		//刪
+		console.log(arr2.pop() + ' | ' + arr2)
+		console.log(arr2.shift() + ' | ' + arr2)
+		//索引
+		//由前往後，重複元素索引不同
+		console.log(arr1.indexOf('c'))//2
+		console.log(arr1.indexOf('b'))//1
+		console.log(arr1.indexOf('e'))//-1
+		console.log('-----------------')
+		//由後往前,重複元素索引不同
+		console.log(arr1.lastIndexOf('c'))//3
+		console.log(arr1.lastIndexOf('b'))//1
+		console.log(arr1.lastIndexOf('e'))//-1
+		console.log('-------------------------')
+		//去重set
+		let arr3 = ['1','1','2','2']
+		function set (arr) {
+			let newArr = []
+			for (let i = 0; i < arr.length; i++) {
+				if (newArr.indexOf(arr[i]) === -1) {
+					newArr.push(arr[i])
+				}
+			}
+			return newArr
+		}
+		console.log(set(arr3))
+		console.log('-------------------------------')
+		//to string
+		let arr4 = [1,2,3,4,5,6]
+		console.log(arr4.toString())
+		console.log(arr4.toLocaleString())
+		console.log(arr4.join('|'))
+		console.log('---------------------')
+		console.log(arr4.concat([7,8,9]))
+		console.log(arr4.slice(1,3))//不含尾
+		console.log(arr4.splice(4,2))
+		console.log(arr4)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

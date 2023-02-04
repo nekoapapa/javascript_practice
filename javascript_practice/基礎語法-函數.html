@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+	<script>
+		function getSum (num1, num2) {
+			let sum = 0
+			for (let i = num1; i <= num2; i++) {
+				sum += i;
+			}
+			return sum
+		}
+		console.log(getSum(1,10))
+		console.log('-------')
+		function type (num1,num2,num3) {
+			console.log(num1 + typeof num1)
+			console.log(num2 + typeof num2)
+			console.log(num3 + typeof num3)
+		}
+		type('a',1,true)
+		console.log('-------------')
+		type('a',1)
+		console.log('---------------')
+		function returns () {}
+		console.log(returns())
+		console.log('---------')
+		//偽數組
+		function argument () {
+			console.log(arguments);
+			console.log(arguments[0])
+			console.log(arguments.length)
+			arguments[0] = 'a'
+			console.log(arguments);
+			arguments[6] = 6
+			console.log(arguments);
+			console.log(arguments.length)
+			console.log(arguments[6])
+		}
+		argument(1,2,3,4,5)
+		console.log('---------')
+		let fn = function () {
+			console.log('123')
+			return 11
+		}
+		let fn2 = function () {
+			return 'abc'
+		}
+		console.log('---------')
+		console.log(typeof fn2)
+		console.log(typeof fn2())
+		console.log('--------')
+		console.log(typeof fn)
+		console.log(typeof fn())
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

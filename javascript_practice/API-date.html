@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+	<script>
+		//當前時間
+		let now = new Date()
+		let now2 = +new Date()
+		console.log(now)
+		
+		console.log('--------------')
+		
+		//自訂時間
+		let date1 = new Date('2010-10-10')
+		console.log(date1)
+		
+		console.log('----------------')
+		
+		let year = now.getFullYear()
+		let month = now.getMonth() + 1 //數值少一月，需加一
+		let dates = now.getDate()
+		let day = now.getDay()
+		let hour = now.getHours()
+		let min = now.getMinutes()
+		let sec = now.getSeconds()
+		let arr = ['日', '一', '二', '三', '四', '五', '六']
+		console.log(year + '年 ' + month + '月 ' + dates + '日 星期' + arr[day]+' ' + hour + ':' + min + ':' + sec )
+		
+		console.log('--------------------')
+		
+		//距1970-1-1 00-00-00 總毫秒數
+		console.log(now.valueOf())
+		console.log(now.getTime())
+		console.log(now)
+		console.log(now2) //+new
+		
+		let conutDown = function (time) {
+			let now = +new Date()
+			let inputTime = +new Date(time)
+			let times = (inputTime - now) / 1000 //sec
+			let d = parseInt(times / 60 / 60 / 24);
+			let h = parseInt(times / 60 / 60 %24);
+			let m = parseInt(times / 60 %60);
+			let s = parseInt(times%60);
+			let str = d + '日' + h + '時' + m + '分' + s + '秒'
+			return str
+		}
+		console.log(conutDown('2023-2-6'))
+
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

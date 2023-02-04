@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+	<script>
+		//pi
+		console.log(Math.PI)
+		//MAX
+		console.log(Math.max(1, '2', 1))//2
+		console.log(Math.min(false, 2, 3))//0
+		console.log(Math.min(NaN, 2, 3))//NaN
+		console.log(Math.min(null, 2, 3))//0
+		console.log(Math.min('a', 'b','c'))//NaN
+		//向下取整
+		console.log(Math.floor(12.2))//12
+		console.log(Math.floor(-12.2))//-13
+		//向上取整
+		console.log(Math.ceil(12.2))//13
+		console.log(Math.ceil(-12.2))//-12
+		//四捨五入
+		console.log(Math.round(12.5))//13
+		console.log(Math.round(-12.5))//-12
+		//絕對值
+		console.log(Math.abs(-12))//12
+		
+		console.log('-------------------')
+		//隨機數
+		//0-1 float
+		console.log(Math.random())
+		//min-max float
+		function getRandomArbitrary(min, max) {
+			return Math.random() * (max - min) + min;
+		}
+		console.log(getRandomArbitrary(1,2))
+		//min-max int not include max
+		function getRandomInt(min, max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+		}
+		console.log(getRandomInt(1,2))//1
+		//min-max int include max,min
+		function getRandomIntInclusive(min, max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值
+		}
+		console.log(getRandomIntInclusive(1,2))//1 or 2
+		
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
