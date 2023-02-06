@@ -122,6 +122,15 @@
 </ul>
 </body>
 <script>
-
+	let nav = document.querySelector('.nav')
+	let lis = nav.children
+	for (let i = 0; i < lis.length; i++) {
+		lis[i].onmouseover = function () {
+			this.children[1].style.display = 'block'
+		}
+		lis[i].onmouseout = function () {
+			this.children[1].style.display = 'none'
+		}
+	}
 </script>
 </html>
