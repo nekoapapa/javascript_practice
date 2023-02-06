@@ -14,6 +14,16 @@
 			height: 50px;
 			background-color: purple;
 		}
+		.father {
+			width: 100px;
+			height: 100px;
+			background-color: purple;
+		}
+		.son {
+			width: 50px;
+			height: 50px;
+			background-color: pink;
+		}
 	</style>
 </head>
 <body>
@@ -26,6 +36,16 @@
 		<li>4</li>
 	</ul>
 	<a href="https://www.google.com/">google</a>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+	<ul id="ul2">
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+	</ul>
 </body>
 <script>
 	let event = document.querySelector('#event')
@@ -47,6 +67,21 @@
 	let a = document.querySelector('a')
 	a.addEventListener('click',function (e) {
 		e.preventDefault()
+	})
+	//阻止冒泡
+	let father = document.querySelector('.father')
+	let son = document.querySelector('.son')
+	son.addEventListener('click',function (e) {
+		alert('son')
+		e.stopPropagation()
+	})
+	father.addEventListener('click',function (e) {
+		alert('father')
+	})
+	//事件委託
+	let ul2 = document.querySelector('#ul2')
+	ul2.addEventListener('click',function (e) {
+		e.target.style.color = 'pink'
 	})
 </script>
 </html>

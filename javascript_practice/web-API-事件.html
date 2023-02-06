@@ -92,7 +92,7 @@
 		}
 		divs[1].addEventListener('click',fn)//不須加()
 		//事件流
-		//true=>捕獲
+		//true=>捕獲，父向子傳遞
 		let first = document.querySelector('.first')
 		let second = document.querySelector('.second')
 		let third = document.querySelector('.third')
@@ -106,7 +106,7 @@
 			alert('first')
 		}, true)
 		
-		//false,省略=> 冒泡階段
+		//false,省略=> 冒泡階段，子向父傳遞
 		//onblur,onfocus,onmouseenter,onmouseleave 無冒泡
 		let first2 = document.querySelector('.first2')
 		let second2 = document.querySelector('.second2')
