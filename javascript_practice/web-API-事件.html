@@ -6,16 +6,29 @@
 </head>
 <body>
 	<button id="btn">ian</button>
-	<div>abc</div>
+	<button id="btn2">ian2</button>
+	<button id="btn3">ian3</button>
 	<script>
 		let btn = document.getElementById('btn')
+		let btn2 = document.getElementById('btn2')
+		let btn3 = document.getElementById('btn3')
 		btn.onclick = function () {
 			alert('hello')
 		}
-		let div = document.querySelector('div')
-		div.onclick = function () {
-			console.log('abc')
-		}
+		//事件監聽
+		//可添加多個事件，ie9上支持
+		btn2.addEventListener('click',function () {
+			alert('11')
+		})
+		btn2.addEventListener('click',function () {
+			alert('22')
+		})
+		//attach event，可兼容ie9前
+		btn3.attachEvent('onclick',function () {
+			alert('11')
+		})
+		
+		
 	</script>
 
 </body>
