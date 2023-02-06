@@ -5,9 +5,25 @@
 	<title>Title</title>
 </head>
 <body>
-
+	<div class="father">
+		<div class="child">child</div>
+		<div class="child">child</div>
+		<div class="child">child</div>
+		<div class="child">child</div>
+	</div>
 </body>
 <script>
-
+	//節點類型
+	//元素:<a>,<p> nodeType = 1
+	//文本:<p>123</p> nodeType = 3
+	//屬性:<a href = '#'></a>
+	let child = document.querySelector('.child')
+	let father = document.querySelector('.father')
+	console.log(child.parentNode)//獲取元素,文本
+	console.log(father.childNodes)
+	console.log(father.childNodes[0].nodeType)
+	console.log(father.childNodes[1].nodeType)
+	console.log('--------------')
+	console.log(father.children)//獲取元素
 </script>
 </html>
