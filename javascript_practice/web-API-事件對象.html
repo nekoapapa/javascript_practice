@@ -3,8 +3,43 @@
 <head>
 	<meta charset = "UTF-8">
 	<title>Title</title>
+	<style>
+		#event {
+			width: 50px;
+			height: 50px;
+			background-color: pink;
+		}
+		#event2 {
+			width: 50px;
+			height: 50px;
+			background-color: purple;
+		}
+	</style>
 </head>
 <body>
-
+	<div id="event"></div>
+	<div id="event2"></div>
+	<ul id="ul">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
 </body>
+<script>
+	let event = document.querySelector('#event')
+	event.onclick = function (eve) {
+		console.log(eve.target)
+		console.log(this)
+	}
+	let event2 = document.querySelector('#event2')
+	event2.addEventListener('click', function (eve2) {
+		console.log(eve2)
+	})
+	let ul = document.querySelector('#ul')
+	ul.addEventListener('click',function (e) {
+		console.log(this)
+		console.log(e.target)
+	})
+</script>
 </html>
