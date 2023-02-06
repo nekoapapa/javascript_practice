@@ -107,6 +107,7 @@
 		}, true)
 		
 		//false,省略=> 冒泡階段
+		//onblur,onfocus,onmouseenter,onmouseleave 無冒泡
 		let first2 = document.querySelector('.first2')
 		let second2 = document.querySelector('.second2')
 		let third2 = document.querySelector('.third2')
@@ -119,8 +120,6 @@
 		first2.addEventListener('click',function () {
 			alert('first')
 		}, false)
-		
 	</script>
-
 </body>
 </html>
