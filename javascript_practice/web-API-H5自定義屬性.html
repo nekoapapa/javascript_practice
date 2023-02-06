@@ -5,6 +5,16 @@
 	<title>Title</title>
 </head>
 <body>
-
+	<div getTime="20"></div>
 </body>
+<script>
+	let div = document.querySelector('div')
+	console.log(div.getTime)//undefined
+	console.log(div.getAttribute('getTime'))
+	div.setAttribute('data-index', 30)
+	div.setAttribute('data-index-First', 40)
+	console.log(div.dataset)
+	console.log(div.dataset.index);
+	console.log(div.dataset.indexFirst);
+</script>
 </html>
