@@ -25,6 +25,7 @@
 		<li>3</li>
 		<li>4</li>
 	</ul>
+	<a href="https://www.google.com/">google</a>
 </body>
 <script>
 	let event = document.querySelector('#event')
@@ -40,6 +41,12 @@
 	ul.addEventListener('click',function (e) {
 		console.log(this)
 		console.log(e.target)
+		console.log(e.type)
+	})
+	//阻止默認行為
+	let a = document.querySelector('a')
+	a.addEventListener('click',function (e) {
+		e.preventDefault()
 	})
 </script>
 </html>
