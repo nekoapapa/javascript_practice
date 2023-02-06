@@ -14,6 +14,7 @@
 	<div class="first">1</div>
 	<div class="second">2</div>
 	<div class="third">3</div>
+	<ul id="ul"></ul>
 </body>
 <script>
 	//節點類型
@@ -63,6 +64,11 @@
 	}
 	console.log(getNextElementSibling(second))
 	console.log(getPreviousElementSibling(second))
-	
+	console.log('------------------------')
+	//創建添加子節點
+	let li = document.createElement('li')
+	let ul = document.getElementById('ul')
+	li.innerText = 'li1'
+	ul.appendChild(li)
 </script>
 </html>
