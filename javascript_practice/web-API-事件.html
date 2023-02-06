@@ -9,6 +9,11 @@
 			height: 100px;
 			background-color: pink;
 		}
+		.third {
+			width: 100px;
+			height: 100px;
+			background-color: purple;
+		}
 	</style>
 </head>
 <body>
@@ -18,6 +23,11 @@
 	<div>1</div>
 	<div>2</div>
 	<div>3</div>
+	<div class="first">
+		<div class="second">
+			<div class="third"></div>
+		</div>
+	</div>
 	<script>
 		let btn = document.getElementById('btn')
 		let btn2 = document.getElementById('btn2')
@@ -50,6 +60,9 @@
 			divs[1].removeEventListener('click',fn)
 		}
 		divs[1].addEventListener('click',fn)//不須加()
+		//事件流
+		
+		
 		
 	</script>
 
