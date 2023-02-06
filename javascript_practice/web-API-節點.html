@@ -11,12 +11,16 @@
 		<div class="child">child3</div>
 		<div class="child">child4</div>
 	</div>
+	<div class="first">1</div>
+	<div class="second">2</div>
+	<div class="third">3</div>
 </body>
 <script>
 	//節點類型
 	//元素:<a>,<p> nodeType = 1
 	//文本:<p>123</p> nodeType = 3
 	//屬性:<a href = '#'></a>
+	//父子節點
 	let child = document.querySelector('.child')
 	let father = document.querySelector('.father')
 	console.log(child.parentNode)//獲取元素,文本
@@ -30,7 +34,36 @@
 	console.log('------------------')
 	console.log(father.children[0])
 	console.log(father.children[father.children.length-1])
+	//兄弟節點
+	let second = document.querySelector('.second')
+	//元素、文本
+	console.log(second.nextSibling)
+	console.log(second.previousSibling)
+	console.log('--------------------')
+	//元素
+	console.log(second.nextElementSibling)
+	console.log(second.previousElementSibling)
+	console.log('------------------------')
+	//兼容函數
+	function getNextElementSibling(element) {
+		let el = element
+		while (el = el.nextSibling) {
+			if (el.nodeType === 1)
+				return el
+		}
+		return null
+	}
+	function getPreviousElementSibling(element) {
+		let el = element
+		while (el = el.previousSibling) {
+			if (el.nodeType === 1)
+				return el
+		}
+		return null
+	}
 	
+	console.log(getNextElementSibling(second))
+	console.log(getPreviousElementSibling(second))
 	
 </script>
 </html>
