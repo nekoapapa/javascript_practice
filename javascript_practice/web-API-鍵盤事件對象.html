@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<input type="text">
+</body>
+<script>
+	//keyup,keydown不區分字母大小雪
+	// document.addEventListener('keyup', function (e) {
+	// 	console.log(e.keyCode)
+	// })
+	//keypress區分大小寫
+	// document.addEventListener('keypress', function (ev) {
+	// 	console.log(ev.keyCode)
+	// })
+	let search = document.querySelector('input')
+	document.addEventListener('keyup', function (ev) {
+		if (ev.keyCode === 83) {
+			search.focus()
+		}
+	})
+</script>
+</html>
