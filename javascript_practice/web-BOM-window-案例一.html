@@ -5,6 +5,16 @@
 	<title>Title</title>
 </head>
 <body>
+	<button>click</button>
 	<img src="images/ad.jpg" alt="" class="ad">
+	<script>
+		let btn = document.querySelector('button')
+		let ad = document.querySelector('.ad')
+		btn.addEventListener('click',function () {
+			setTimeout(function () {
+				ad.style.display = 'none'
+			},5000)
+		})
+	</script>
 </body>
 </html>

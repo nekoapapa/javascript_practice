@@ -5,10 +5,15 @@
 	<title>Title</title>
 </head>
 <body>
+	<button>stop</button>
 	<script>
-		setTimeout(function () {
+		let stop = document.querySelector('button')
+		let timer = setTimeout(function () {
 			console.log('times out')
 		},2000)
+		stop.addEventListener('click',function () {
+			clearTimeout(timer)
+		})
 	</script>
 </body>
 </html>
