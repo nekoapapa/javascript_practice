@@ -37,5 +37,4 @@ window.addEventListener('load',function () {
         bigIMG.style.left = -bigX + 'px'
         bigIMG.style.top = -bigY + 'px'
     })
-
 })
