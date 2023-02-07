@@ -11,6 +11,16 @@
 
 </body>
 <script>
-
+	//執行順序
+	//keydown --> keypress --> keyup
+	document.onkeyup = function () {
+		console.log('111')
+	}
+	document.onkeydown = function () {
+		console.log('222')
+	}
+	document.addEventListener('keypress',function () {
+		console.log('333')
+	})
 </script>
 </html>
