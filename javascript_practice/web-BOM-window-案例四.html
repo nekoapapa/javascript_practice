@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+	<style>
+		.box {
+			width: 100px;
+			height: 100px;
+			margin-top: 100px;
+			margin-left: 100px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+<script>
+	let box = document.querySelector('.box')
+	box.addEventListener('mousemove',function (e) {
+		let x = e.pageX - this.offsetLeft
+		let y = e.pageY - this.offsetTop
+		this.innerHTML  = 'x: ' + x + ' y: ' + y
+	})
+</script>
+</html>
