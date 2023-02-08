@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+	<style>
+		div {
+			position: absolute;
+			left: 0;
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+		span {
+			position: absolute;
+			display: block;
+			width: 150px;
+			height: 150px;
+			background-color: purple;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<span></span>
+</body>
+<script>
+	function animate(obj, target) {
+		let timer = setInterval(function () {
+			if (obj.offsetLeft >= target) {
+				clearInterval(timer)
+			}
+			obj.style.left = obj.offsetLeft + 5 + 'px'
+		}, 30)
+	}
+	let div = document.querySelector('div')
+	let span = document.querySelector('span')
+	animate(div, 300)
+	animate(span, 200)
+</script>
+</html>
