@@ -77,7 +77,7 @@ window.addEventListener('load', function() {
                 goBack.style.display = 'none'
             }
     })
-    goBack,addEventListener('click', function () {
+    goBack.addEventListener('click', function () {
         window.scroll(0,0)
     })
 })
