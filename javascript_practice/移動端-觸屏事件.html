@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+<script>
+	let div = document.querySelector('div')
+	div.addEventListener('touchstart',function (e) {
+		console.log(e.touches)
+		console.log(e.targetTouches)
+		console.log(e.changedTouches)
+	})
+	div.addEventListener('touchmove',function () {
+		console.log('abc')
+	})
+	div.addEventListener('touchend',function () {
+		console.log('333')
+	})
+</script>
+</html>
