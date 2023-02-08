@@ -67,4 +67,17 @@ window.addEventListener('load', function() {
             ul.style.transform = 'translateX(' + translateX+ 'px)'
         },2000)
     })
+    //返回頂部
+    let goBack = document.querySelector('.goBack')
+    let nav = document.querySelector('nav')
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset >= nav.offsetTop) {
+                goBack.style.display = 'block'
+            }else {
+                goBack.style.display = 'none'
+            }
+    })
+    goBack,addEventListener('click', function () {
+        window.scroll(0,0)
+    })
 })
