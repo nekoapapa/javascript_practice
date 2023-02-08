@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+	<script src="js/jquery.min.js"></script>
+	<style>
+		div {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<button>move</button>
+	<div></div>
+</body>
+<script>
+	$(function () {
+		$('button').click(function () {
+			$('div').animate({
+				left: 500,
+				top: 300,
+				opacity: .4,
+				width: 200
+			},500)
+		})
+	})
+</script>
+</html>
