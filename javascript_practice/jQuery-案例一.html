@@ -134,11 +134,19 @@
 	// 	}
 	// }
 	$(function () {
-		$('.nav>li').mouseenter(function () {
-			$(this).children('ul').show()
-		})
-		$('.nav>li').mouseleave(function () {
-			$(this).children('ul').hide()
+		// $('.nav>li').mouseenter(function () {
+		// 	$(this).children('ul').slideDown(200)
+		// })
+		// $('.nav>li').mouseleave(function () {
+		// 	$(this).children('ul').slideUp(200)
+		// })
+		// $('.nav>li').hover(function () {
+		// 	$(this).children('ul').slideDown(200)
+		// },function () {
+		// 	$(this).children('ul').slideUp(200)
+		// })
+		$('.nav>li').hover(function () {
+			$(this).children('ul').stop().slideToggle(200)
 		})
 	})
 </script>
