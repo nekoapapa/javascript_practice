@@ -14,6 +14,7 @@
 		span {
 			position: absolute;
 			display: block;
+			top: 150px;
 			width: 150px;
 			height: 150px;
 			background-color: purple;
@@ -21,21 +22,36 @@
 	</style>
 </head>
 <body>
-	<div></div>
 	<span></span>
+	<button>purple to 0</button>
+	<button>purple to 500</button>
+	<button>purple to 800</button>
 </body>
 <script>
 	function animate(obj, target) {
-		let timer = setInterval(function () {
-			if (obj.offsetLeft >= target) {
+		clearInterval(obj.timer)
+		obj.timer = setInterval(function () {
+			//向上取整
+			// let step = Math.ceil((target - obj.offsetLeft) / 10)
+			let step = (target - obj.offsetLeft) / 10
+			step = step > 0 ? Math.ceil(step) : Math.floor(step)
+			if (obj.offsetLeft == target) {
 				clearInterval(timer)
 			}
-			obj.style.left = obj.offsetLeft + 5 + 'px'
+			obj.style.left = obj.offsetLeft + step + 'px'
 		}, 30)
 	}
 	let div = document.querySelector('div')
 	let span = document.querySelector('span')
-	animate(div, 300)
-	animate(span, 200)
+	let btn = document.querySelectorAll('button')
+	btn[0].addEventListener('click',function () {
+		animate(span, 0)
+	})
+	btn[1].addEventListener('click',function () {
+		animate(span, 500)
+	})
+	btn[2].addEventListener('click',function () {
+		animate(span, 800)
+	})
 </script>
 </html>
