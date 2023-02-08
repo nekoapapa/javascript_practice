@@ -5,6 +5,8 @@
 	<title>Title</title>
 	<style>
 		div {
+			position: absolute;
+			left: 0;
 			width: 100px;
 			height: 100px;
 			background-color: pink;
@@ -16,16 +18,24 @@
 </body>
 <script>
 	let div = document.querySelector('div')
-	div.addEventListener('touchstart',function (e) {
-		console.log(e.touches)
-		console.log(e.targetTouches)
-		console.log(e.changedTouches)
+	let startX = 0
+	let startY = 0
+	let x = 0
+	let y = 0
+	div.addEventListener('touchstart', function (evt) {
+		startX = evt.targetTouches[0].pageX
+		startY = evt.targetTouches[0].pageY
+		x = this.offsetLeft
+		y = this.offsetTop
 	})
-	div.addEventListener('touchmove',function () {
-		console.log('abc')
+	div.addEventListener('touchmove', function (evt) {
+		let moveX = evt.targetTouches[0].pageX - startX
+		let moveY = evt.targetTouches[0].pageY - startY
+		this.style.left = x + moveX  + 'px'
+		this.style.top = y + moveY  + 'px'
+		evt.preventDefault()
 	})
-	div.addEventListener('touchend',function () {
-		console.log('333')
-	})
+	
+	
 </script>
 </html>
